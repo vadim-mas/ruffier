@@ -4,7 +4,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.textinput import TextInput
-from instruction import txt_instruction, txt_test1, txt_test3, txt_sits
+from instructions import txt_instruction, txt_test1, txt_test3, txt_sits
 from kivy.core.window import Window
 from kivy.animation import Animation
 from ruffier import test
@@ -149,6 +149,7 @@ class PulseScreen3(Screen):
         self.in_result3 = TextInput(text='0', multiline=False)
         self.btn = Button(text='Завершить', size_hint=(0.3, 0.2), pos_hint={'center_x': 0.5})
         self.btn.on_press = self.next
+        self.btn.background_color = btn_color
         anim = Animation()
 
         line1 = BoxLayout(size_hint=(0.8, None), height='30sp')
